@@ -4,9 +4,9 @@ from django.conf.urls import patterns,  url
 from .views import TemplateGraphView
 
 
-urlpatterns = patterns('')
+urlpatterns = []
 
 if settings.DEBUG:
-    urlpatterns += patterns('',
+    urlpatterns += [
         url(r'^', TemplateGraphView.as_view()),
-    )
+    ]
